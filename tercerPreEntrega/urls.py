@@ -6,5 +6,5 @@ from appCoder.views import curso
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('AppCoder/', include('appCoder.urls'))
+    path('', include('appCoder.urls'))
 ]

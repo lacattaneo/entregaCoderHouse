@@ -3,7 +3,7 @@ from appCoder.models import Curso, Estudiante, Profesor, Entregable
 
 
 def inicio(request):
-    return render(request, "AppCoder/inicio.html")
+    return render(request, "AppCoder/index.html")
 
 
 def curso(request):
