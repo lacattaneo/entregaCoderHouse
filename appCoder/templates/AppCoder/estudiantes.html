@@ -1,13 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "AppCoder/base.html" %}
+    {% load static %}
 
-    <title>Document</title>
-</head>
-<body>
-    <body style="background-color: brown;">
-        <h1>Vista de los Estudiantes</h1>
-</body>
-</html>
+
+{% block contenidoCambiante %}
+<!-- Contenido principal de la pestaña de estudiantes -->
+<div class="container">
+    <h1>Estudiantes</h1>
+    
+    <section class="student-info">
+        <h2>Información de los Estudiantes</h2>
+        <p>Aquí puedes agregar información general sobre los estudiantes, como el objetivo de la sección, un resumen, o cualquier otro dato relevante.</p>
+    </section>
+
+    <section class="student-list">
+        <h2>Lista de Estudiantes</h2>
+        <ul>
+            <li>Nombre del Estudiante 1</li>
+            <li>Nombre del Estudiante 2</li>
+            <li>Nombre del Estudiante 3</li>
+            <!-- Agrega más estudiantes según sea necesario -->
+        </ul>
+    </section>
+
+    <section class="student-details">
+        <h2>Detalles del Estudiante</h2>
+        <p>Selecciona un estudiante de la lista para ver más detalles.</p>
+        <!-- Aquí puedes agregar un contenedor dinámico que muestre detalles de un estudiante seleccionado -->
+        <div id="student-details-container">
+            <!-- Detalles de los estudiantes aparecerán aquí -->
+        </div>
+    </section>
+</div>
+
+{% endblock contenidoCambiante %}

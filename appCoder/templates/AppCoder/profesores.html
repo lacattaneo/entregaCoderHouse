@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <body style="background-color: greenyellow;">
-    <h1>Vista de los Profesores</h1>
+{% extends "AppCoder/base.html" %}
+    {% load static %}
 
-</body>
-</html>
+
+{% block contenidoCambiante %}
+<main class="container">
+    <section class="professors">
+        <h1>Profesores</h1>
+        <div class="professor-list">
+            <div class="professor-item">
+                <h2>Profesor 1: [Nombre del Profesor]</h2>
+                <p>Descripción breve del profesor y su especialidad.</p>
+                <a href="profesor1.html" class="btn btn-secondary">Ver Perfil</a>
+            </div>
+            <div class="professor-item">
+                <h2>Profesor 2: [Nombre del Profesor]</h2>
+                <p>Descripción breve del profesor y su especialidad.</p>
+                <a href="profesor2.html" class="btn btn-secondary">Ver Perfil</a>
+            </div>
+            <!-- Añade más profesores según sea necesario -->
+        </div>
+    </section>
+</main>
+
+{% endblock contenidoCambiante %}

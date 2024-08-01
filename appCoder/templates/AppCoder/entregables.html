@@ -1,13 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <body style="background-color: teal;">
-    <h1 style="position: absolute;";">Vista de los Entregables</h1>
-</body>
-</html>
+{% extends "AppCoder/base.html" %}
+    {% load static %}
+
+
+{% block contenidoCambiante %}
+<main class="container">
+    <section class="deliverables">
+        <h1>Entregables</h1>
+        <div class="deliverable-list">
+            <div class="deliverable-item">
+                <h2>Entregable 1: [Nombre del Entregable]</h2>
+                <p>Descripción breve del entregable.</p>
+                <a href="entregable1.html" class="btn btn-secondary">Ver Detalles</a>
+            </div>
+            <div class="deliverable-item">
+                <h2>Entregable 2: [Nombre del Entregable]</h2>
+                <p>Descripción breve del entregable.</p>
+                <a href="entregable2.html" class="btn btn-secondary">Ver Detalles</a>
+            </div>
+            <!-- Añade más entregables según sea necesario -->
+        </div>
+    </section>
+</main>
+
+{% endblock contenidoCambiante %}

@@ -27,12 +27,12 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#!">Cursos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Profesores</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Estudiantes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Entregables</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Registrarse</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Iniciar Sesion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'profesores' %}">Profesores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'cursos' %}">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'estudiantes' %}">Estudiantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'entregables' %}">Entregables</a></li>
+                        <li class="nav-item"><a class="btn-primary" href="#NADAAUN">INICIAR</a></li>
                     </ul>
                 </div>
             </div>

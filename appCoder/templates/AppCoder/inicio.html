@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <body style="background-color: yellowgreen;">
-        <h1 style="font-size: larger;">Vista de Inicio</h1>
+{% extends "AppCoder/base.html" %}
+    {% load static %}
 
-</body>
-</html>
+
+{% block contenidoCambiante %}
+<main class="container">
+    <section class="hero">
+        <h1>Bienvenido a [Nombre del Sitio]</h1>
+        <p>Explora los cursos y recursos que ofrecemos para ayudarte a aprender y crecer.</p>
+        <a href="cursos.html" class="btn btn-primary">Ver Cursos</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Aprende a tu propio ritmo</h2>
+            <p>Accede a materiales de estudio cuando lo necesites.</p>
+        </div>
+        <div class="feature">
+            <h2>Instructores Expertos</h2>
+            <p>Aprende de los mejores en la industria.</p>
+        </div>
+        <div class="feature">
+            <h2>Certificación</h2>
+            <p>Obtén certificados que demuestren tus habilidades.</p>
+        </div>
+    </section>
+</main>
+
+{% endblock contenidoCambiante %}

@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
-</head>
-<body>
-    <body style="background-color: yellow;"></body>
-    <h1 style="color: blueviolet;">Vista de los Cursos:</h1>
+{% extends "AppCoder/base.html" %}
+    {% load static %}
 
-</body>
-</html>
+
+{% block contenidoCambiante %}
+<main class="container">
+    <section class="courses">
+        <h1>Nuestros Cursos</h1>
+        <div class="course-list">
+            <div class="course-item">
+                <h2>Curso 1: [Nombre del Curso]</h2>
+                <p>Descripción breve del curso.</p>
+                <a href="curso1.html" class="btn btn-secondary">Más información</a>
+            </div>
+            <div class="course-item">
+                <h2>Curso 2: [Nombre del Curso]</h2>
+                <p>Descripción breve del curso.</p>
+                <a href="curso2.html" class="btn btn-secondary">Más información</a>
+            </div>
+            <!-- Añade más cursos según sea necesario -->
+        </div>
+    </section>
+</main>
+
+{% endblock contenidoCambiante %}
