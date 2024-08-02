@@ -1,25 +1,50 @@
 {% extends "AppCoder/base.html" %}
-    {% load static %}
-
+{% load static %}
 
 {% block contenidoCambiante %}
-<main class="container">
-    <section class="deliverables">
-        <h1>Entregables</h1>
-        <div class="deliverable-list">
-            <div class="deliverable-item">
-                <h2>Entregable 1: [Nombre del Entregable]</h2>
-                <p>Descripción breve del entregable.</p>
-                <a href="entregable1.html" class="btn btn-secondary">Ver Detalles</a>
-            </div>
-            <div class="deliverable-item">
-                <h2>Entregable 2: [Nombre del Entregable]</h2>
-                <p>Descripción breve del entregable.</p>
-                <a href="entregable2.html" class="btn btn-secondary">Ver Detalles</a>
-            </div>
-            <!-- Añade más entregables según sea necesario -->
+<!--header-->
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-0">
+            <h1 class="masthead-heading mb-0">ENTREGABLES</h1>
         </div>
-    </section>
-</main>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<!--fin header-->
 
+<div class="container mt-4">
+    <h1 class="mb-4">Entregables</h1>
+    <p class="lead">Aquí puedes ver y gestionar tus entregables.</p>
+    <div class="list-group">
+        <!-- Entregable Python - Proyecto Final -->
+        <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center border-0 shadow-sm mb-3">
+            <div>
+                <h5 class="mb-1">Python - Proyecto Final</h5>
+                <p class="mb-0 text-muted">Finaliza el proyecto para el curso de Python.</p>
+            </div>
+            <span class="badge bg-success rounded-pill">Entregado</span>
+        </div>
+        <!-- Entregable JavaScript - Ejercicio 5 -->
+        <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center border-0 shadow-sm mb-3">
+            <div>
+                <h5 class="mb-1">JavaScript - Ejercicio 5</h5>
+                <p class="mb-0 text-muted">Completa el ejercicio de JavaScript.</p>
+            </div>
+            <span class="badge bg-warning rounded-pill">Pendiente</span>
+        </div>
+        <!-- Entregable Django - Práctica 2 -->
+        <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center border-0 shadow-sm mb-3">
+            <div>
+                <h5 class="mb-1">Java - Práctica 2</h5>
+                <p class="mb-0 text-muted">Entrega la práctica de POO con Java.</p>
+            </div>
+            <span class="badge bg-danger rounded-pill">Atrasado</span>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary mt-4 d-block mx-auto">Añadir Entregable</a>
+</div>
 {% endblock contenidoCambiante %}

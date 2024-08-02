@@ -1,25 +1,58 @@
 {% extends "AppCoder/base.html" %}
-    {% load static %}
-
+{% load static %}
 
 {% block contenidoCambiante %}
-<main class="container">
-    <section class="professors">
-        <h1>Profesores</h1>
-        <div class="professor-list">
-            <div class="professor-item">
-                <h2>Profesor 1: [Nombre del Profesor]</h2>
-                <p>Descripción breve del profesor y su especialidad.</p>
-                <a href="profesor1.html" class="btn btn-secondary">Ver Perfil</a>
-            </div>
-            <div class="professor-item">
-                <h2>Profesor 2: [Nombre del Profesor]</h2>
-                <p>Descripción breve del profesor y su especialidad.</p>
-                <a href="profesor2.html" class="btn btn-secondary">Ver Perfil</a>
-            </div>
-            <!-- Añade más profesores según sea necesario -->
+<!--header-->
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-0">
+            <h1 class="masthead-heading mb-0">PROFESORES</h1>
         </div>
-    </section>
-</main>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<!--fin header-->
 
+<div class="container mt-4">
+    <h1 class="mb-4">Profesores</h1>
+    <p>Conoce a nuestros profesores expertos.</p>
+    <div class="row">
+        <!-- Profesor Carlos García -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/profesores/profePython.jpg' %}" class="card-img-top" alt="Prof. Carlos García">
+                <div class="card-body">
+                    <h3 class="card-title">Prof. Carlos García</h3>
+                    <p class="card-text">Especialista en Python y Ciencia de Datos.</p>
+                    <a href="#" class="btn btn-info">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+        <!-- Profesor Laura Torres -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/profesores/profeDesarrollo.jpg' %}" class="card-img-top" alt="Prof. Laura Torres">
+                <div class="card-body">
+                    <h3 class="card-title">Prof. Laura Torres</h3>
+                    <p class="card-text">Experta en Desarrollo Web con JavaScript y React.</p>
+                    <a href="#" class="btn btn-info">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+        <!-- Profesor Martín Gómez -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/profesores/faltante.jpg' %}" class="card-img-top" alt="Prof. Martín Gómez">
+                <div class="card-body">
+                    <h3 class="card-title">Prof. Martín Gómez</h3>
+                    <p class="card-text">Desarrollador Senior y especialista en Java.</p>
+                    <a href="#" class="btn btn-info">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock contenidoCambiante %}

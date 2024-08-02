@@ -2,34 +2,57 @@
     {% load static %}
 
 
-{% block contenidoCambiante %}
-<!-- Contenido principal de la pestaña de estudiantes -->
-<div class="container">
-    <h1>Estudiantes</h1>
-    
-    <section class="student-info">
-        <h2>Información de los Estudiantes</h2>
-        <p>Aquí puedes agregar información general sobre los estudiantes, como el objetivo de la sección, un resumen, o cualquier otro dato relevante.</p>
-    </section>
+    {% block contenidoCambiante %}
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+            <div class="container px-0">
+                
+                <h1 class="masthead-heading mb-0">ESTUDIANTES</h1>
 
-    <section class="student-list">
-        <h2>Lista de Estudiantes</h2>
-        <ul>
-            <li>Nombre del Estudiante 1</li>
-            <li>Nombre del Estudiante 2</li>
-            <li>Nombre del Estudiante 3</li>
-            <!-- Agrega más estudiantes según sea necesario -->
-        </ul>
-    </section>
-
-    <section class="student-details">
-        <h2>Detalles del Estudiante</h2>
-        <p>Selecciona un estudiante de la lista para ver más detalles.</p>
-        <!-- Aquí puedes agregar un contenedor dinámico que muestre detalles de un estudiante seleccionado -->
-        <div id="student-details-container">
-            <!-- Detalles de los estudiantes aparecerán aquí -->
+            
+                
+            </div>
         </div>
-    </section>
-</div>
+        
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <div class="container">
+        <h1 class="mt-4">Estudiantes</h1>
 
-{% endblock contenidoCambiante %}
+        <div class="row">
+            <!-- Primer estudiante -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/estudiantes/chica1.jpg' %}" class="card-img-top" alt="María Victoria Molina">
+                    <div class="card-body">
+                        <h5 class="card-title">María Victoria Molina</h5>
+                        <p class="card-text">Curso: Python para Principiantes</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo estudiante -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/estudiantes/chico1.jpg' %}" class="card-img-top" alt="Juan Suarez">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Suarez</h5>
+                        <p class="card-text">Curso: Java</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tercer estudiante -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/estudiantes/chica2.jpg' %}" class="card-img-top" alt="Ana Rodríguez">
+                    <div class="card-body">
+                        <h5 class="card-title">Ana Rodríguez</h5>
+                        <p class="card-text">Curso: Desarrollo Web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock contenidoCambiante %}

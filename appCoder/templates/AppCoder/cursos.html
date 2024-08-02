@@ -1,25 +1,57 @@
 {% extends "AppCoder/base.html" %}
-    {% load static %}
-
+{% load static %}
 
 {% block contenidoCambiante %}
-<main class="container">
-    <section class="courses">
-        <h1>Nuestros Cursos</h1>
-        <div class="course-list">
-            <div class="course-item">
-                <h2>Curso 1: [Nombre del Curso]</h2>
-                <p>Descripción breve del curso.</p>
-                <a href="curso1.html" class="btn btn-secondary">Más información</a>
-            </div>
-            <div class="course-item">
-                <h2>Curso 2: [Nombre del Curso]</h2>
-                <p>Descripción breve del curso.</p>
-                <a href="curso2.html" class="btn btn-secondary">Más información</a>
-            </div>
-            <!-- Añade más cursos según sea necesario -->
+<!--header-->
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-0">
+            <h1 class="masthead-heading mb-0">CURSOS</h1>
         </div>
-    </section>
-</main>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<!--fin header-->
 
+<div class="container mt-4">
+    <h1 class="mb-4">Cursos Disponibles</h1>
+    <div class="row">
+        <!-- Curso Python para Principiantes -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/cursos/python.jpg' %}" class="card-img-top" alt="Python para Principiantes">
+                <div class="card-body">
+                    <h5 class="card-title">Python para Principiantes</h5>
+                    <p class="card-text">Aprende los conceptos básicos de Python, uno de los lenguajes de programación más populares.</p>
+                    <a href="#" class="btn btn-info">Detalles del Curso</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso Java -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/cursos/javaCurso.png' %}" class="card-img-top" alt="Java">
+                <div class="card-body">
+                    <h5 class="card-title">Java</h5>
+                    <p class="card-text">Desarrolla tus habilidades en Java con este curso, enfocado en el desarrollo de aplicaciones robustas.</p>
+                    <a href="#" class="btn btn-info">Detalles del Curso</a>
+                </div>
+            </div>
+        </div>
+        <!-- Curso Desarrollo Web con JavaScript -->
+        <div class="col-lg-4 mb-4">
+            <div class="card text-center">
+                <img src="{% static 'AppCoder/assets/img/cursos/html.jpg' %}" class="card-img-top" alt="Desarrollo Web con JavaScript">
+                <div class="card-body">
+                    <h5 class="card-title">Desarrollo Web con JavaScript</h5>
+                    <p class="card-text">Construye aplicaciones web robustas utilizando HTML, CSS y JS.</p>
+                    <a href="#" class="btn btn-info">Detalles del Curso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock contenidoCambiante %}

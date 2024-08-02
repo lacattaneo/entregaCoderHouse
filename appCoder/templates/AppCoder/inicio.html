@@ -2,29 +2,26 @@
     {% load static %}
 
 
-{% block contenidoCambiante %}
-<main class="container">
-    <section class="hero">
-        <h1>Bienvenido a [Nombre del Sitio]</h1>
-        <p>Explora los cursos y recursos que ofrecemos para ayudarte a aprender y crecer.</p>
-        <a href="cursos.html" class="btn btn-primary">Ver Cursos</a>
-    </section>
-
-    <section class="features">
-        <div class="feature">
-            <h2>Aprende a tu propio ritmo</h2>
-            <p>Accede a materiales de estudio cuando lo necesites.</p>
+    {% block contenidoCambiante %}
+    <div class="container">
+        <h1 class="mt-4">Bienvenido a Programación Academy</h1>
+        <p>Tu portal para aprender y mejorar tus habilidades en programación. Explora nuestros cursos y comienza tu viaje hoy mismo.</p>
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Aprende a Programar</h2>
+                <p>Inicia tu camino en el mundo de la programación con nuestros cursos básicos.</p>
+                <a href="{% url 'cursos' %}" class="btn btn-primary">Ver Cursos</a>
+            </div>
+            <div class="col-lg-4">
+                <h2>Desafía tus Habilidades</h2>
+                <p>Completa entregables y evalúa tus conocimientos.</p>
+                <a href="{% url 'entregables' %}" class="btn btn-primary">Ver Entregables</a>
+            </div>
+            <div class="col-lg-4">
+                <h2>Conéctate con Profesores</h2>
+                <p>Obtén ayuda y mentoría de expertos en programación.</p>
+                <a href="{% url 'profesores' %}" class="btn btn-primary">Ver Profesores</a>
+            </div>
         </div>
-        <div class="feature">
-            <h2>Instructores Expertos</h2>
-            <p>Aprende de los mejores en la industria.</p>
-        </div>
-        <div class="feature">
-            <h2>Certificación</h2>
-            <p>Obtén certificados que demuestren tus habilidades.</p>
-        </div>
-    </section>
-</main>C:\Users\lauta\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
-
-
-{% endblock contenidoCambiante %}
+    </div>
+    {% endblock contenidoCambiante %}
