@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Agregar Curso</title>
+</head>
+<body>
+    <!--ACTION == nombre de url destino de la informacion-->
+    <!--METHOD == forma en el que se envia la informacion-->
+
+    <form action="/formularioCurso/" method="post"> 
+        {% csrf_token %}
+        <label for="curso">Nombre del Curso: </label>
+        <input type="text" name="curso" id="curso" required>
+
+        <label for="camada">Camada: </label>
+        <input type="text" name="camada" id="camada" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

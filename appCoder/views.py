@@ -2,8 +2,11 @@ from django.shortcuts import render, HttpResponse
 from appCoder.models import Curso, Estudiante, Profesor, Entregable
 
 
-def inicio(request):
+def index(request):
     return render(request, "AppCoder/index.html")
+
+def inicio2(request):
+    return render(request, "AppCoder/inicio.html")
 
 
 def curso(request):
@@ -18,3 +21,14 @@ def estudiantes(request):
 
 def entregables(request):
     return render(request,"AppCoder/entregables.html")
+
+
+
+def formularioCurso(request):
+    if request.method == "POST":
+        curso_nombre = request.POST["curso"]
+        curso_camada = request.POST["camada"]
+        nuevoCurso = Curso(nombre=curso_nombre, camada=curso_camada)
+        nuevoCurso.save()
+        return render(request, "AppCoder/index.html")
+    return render(request,"AppCoder/formularioCurso.html")
