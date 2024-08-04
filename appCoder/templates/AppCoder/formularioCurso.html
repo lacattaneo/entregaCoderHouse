@@ -10,15 +10,22 @@
     <!--ACTION == nombre de url destino de la informacion-->
     <!--METHOD == forma en el que se envia la informacion-->
 
-    <form action="/formularioCurso/" method="post"> 
+    {% if miFormulario.errors %}
+
+    <p style="color: red;">Estan mal los datos ingresados. </p>
+
+    {% endif %}
+
+
+    <form action="" method="POST"> 
         {% csrf_token %}
-        <label for="curso">Nombre del Curso: </label>
-        <input type="text" name="curso" id="curso" required>
+        <table>
+            {{miFormulario.as_table}}
 
-        <label for="camada">Camada: </label>
-        <input type="text" name="camada" id="camada" required>
+        </table>
 
-        <button type="submit">Enviar</button>
+        <input type="submit" value="Enviar">
     </form>
+
 </body>
 </html>

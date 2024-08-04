@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from appCoder.models import Curso, Estudiante, Profesor, Entregable
+from appCoder.forms import FormularioCurso
 
 
 def index(request):
@@ -23,12 +24,18 @@ def entregables(request):
     return render(request,"AppCoder/entregables.html")
 
 
+#formularios
 
 def formularioCurso(request):
     if request.method == "POST":
-        curso_nombre = request.POST["curso"]
-        curso_camada = request.POST["camada"]
-        nuevoCurso = Curso(nombre=curso_nombre, camada=curso_camada)
-        nuevoCurso.save()
-        return render(request, "AppCoder/index.html")
-    return render(request,"AppCoder/formularioCurso.html")
+        miFormulario = FormularioCurso(request.POST)
+        
+        if miFormulario.is_valid():
+            informacion = miFormulario.cleaned_data
+            curso = Curso(nombre=informacion["nombre"], camada=informacion["camada"])
+            curso.save()
+            return redirect("index")
+    else:
+        miFormulario = FormularioCurso()  # Muestra un formulario vacío para construir el HTML
+    
+    return render(request, "AppCoder/formularioCurso.html", {"miFormulario": miFormulario})
