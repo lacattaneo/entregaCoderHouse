@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Desarrollo Web con JavaScript - Detalles</title>
+    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
+</head>
+<body>
+    {% extends "AppCoder/base.html" %}
+    {% block contenidoCambiante %}
+    <header class="masthead text-center text-white bg-primary">
+        <div class="masthead-content">
+            <div class="container px-4">
+                <h1 class="masthead-heading mb-0">Curso Desarrollo Web con JavaScript</h1>
+                <p class="lead mb-4">Construye aplicaciones web interactivas</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/cursos/html.jpg' %}" class="card-img-top" alt="Desarrollo Web con JavaScript">
+                    <div class="card-body">
+                        <h2 class="card-title">Descripción del Curso</h2>
+                        <p class="card-text">
+                            Este curso está diseñado para aquellos interesados en el desarrollo web. Aprenderás a construir aplicaciones web interactivas utilizando HTML, CSS y JavaScript, con un enfoque en prácticas modernas y mejores técnicas de desarrollo.
+                        </p>
+                        <h3 class="card-title">Temas Cubiertos</h3>
+                        <ul>
+                            <li>Introducción a HTML y CSS</li>
+                            <li>JavaScript Básico y Avanzado</li>
+                            <li>Manipulación del DOM</li>
+                            <li>Desarrollo de Aplicaciones Web Responsivas</li>
+                            <li>Uso de APIs y Herramientas de Desarrollo</li>
+                        </ul>
+                        <h3 class="card-title">Duración</h3>
+                        <p>5 semanas (4 horas por semana)</p>
+                        <a href="{% url 'cursos' %}" class="btn btn-primary">Volver a la Lista de Cursos</a>
+                        <a href="{% url 'formularioCursoDesarrolloWeb' %}" class="btn btn-success mt-2">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock contenidoCambiante %}
+</body>
+</html>

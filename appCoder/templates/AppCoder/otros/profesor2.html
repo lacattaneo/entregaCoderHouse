@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Laura Torres - Curriculum</title>
+    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
+</head>
+<body>
+    {% extends "AppCoder/base.html" %}
+    {% block contenidoCambiante %}
+    <header class="masthead text-center text-white bg-primary">
+        <div class="masthead-content">
+            <div class="container px-4">
+                <h1 class="masthead-heading mb-0">Prof. Laura Torres</h1>
+                <p class="lead mb-4">Experta en Desarrollo Web con JavaScript y React</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/profesores/profeDesarrollo.jpg' %}" class="card-img-top" alt="Prof. Laura Torres">
+                    <div class="card-body">
+                        <h2 class="card-title">Perfil Profesional</h2>
+                        <p class="card-text">
+                            Prof. Laura Torres es una experta en desarrollo web con más de 8 años de experiencia en tecnologías modernas como JavaScript y React. Se especializa en el diseño y desarrollo de aplicaciones web interactivas y de alto rendimiento.
+                        </p>
+                        <h3 class="card-title">Educación</h3>
+                        <ul>
+                            <li>Máster en Desarrollo Web - Universidad de Innovación Tecnológica</li>
+                            <li>Licenciatura en Ingeniería de Software - Universidad de Desarrollo</li>
+                        </ul>
+                        <h3 class="card-title">Experiencia</h3>
+                        <ul>
+                            <li>Desarrolladora Frontend en Web Solutions (2016-Presente)</li>
+                            <li>Ingeniera de Software en CodeWorks (2012-2016)</li>
+                        </ul>
+                        <h3 class="card-title">Proyectos Destacados</h3>
+                        <ul>
+                            <li>Aplicación de Gestión de Proyectos en React</li>
+                            <li>Sitio Web E-commerce con JavaScript y Node.js</li>
+                        </ul>
+                        <a href="{% url 'profesores' %}" class="btn btn-primary">Volver a la Lista de Profesores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock contenidoCambiante %}
+</body>
+</html>

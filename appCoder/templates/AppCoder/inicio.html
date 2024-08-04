@@ -1,40 +1,60 @@
 {% extends "AppCoder/base.html" %}
-    {% load static %}
+{% load static %}
 
+{% block contenidoCambiante %}
+<!-- Header -->
+<header class="masthead text-center text-white bg-primary">
+    <div class="masthead-content">
+        <div class="container px-4">
+            <h1 class="masthead-heading mb-0">INICIO</h1>
+            <p class="lead mb-4">Tu portal para aprender y mejorar tus habilidades en programación.</p>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<!-- Fin Header -->
 
-    {% block contenidoCambiante %}
-        <!--header-->
-    <header class="masthead text-center text-white">
-        <div class="masthead-content">
-            <div class="container px-0">
-                <h1 class="masthead-heading mb-0">INICIO</h1>
+<!-- Contenido Principal -->
+<div class="container my-5">
+    <h1 class="text-center mb-4">Bienvenido a Mi Plataforma de Cursos</h1>
+    <p class="text-center mb-5">Explora nuestros cursos y comienza tu viaje hoy mismo con nuestra plataforma de aprendizaje.</p>
+    
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <img src="{% static 'AppCoder/assets/img/cursos/inicio1.jpg' %}" class="card-img-top img-fluid" alt="Aprende a Programar">
+                <div class="card-body">
+                    <h5 class="card-title">Aprende a Programar</h5>
+                    <p class="card-text">Inicia tu camino en el mundo de la programación con nuestros cursos básicos.</p>
+                    <a href="{% url 'cursos' %}" class="btn btn-primary">Ver Cursos</a>
+                </div>
             </div>
         </div>
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
-    </header>
-<!--fin header-->
-    <div class="container">
-        <h1 class="mt-4">Bienvenido a Programación Academy</h1>
-        <p>Tu portal para aprender y mejorar tus habilidades en programación. Explora nuestros cursos y comienza tu viaje hoy mismo.</p>
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Aprende a Programar</h2>
-                <p>Inicia tu camino en el mundo de la programación con nuestros cursos básicos.</p>
-                <a href="{% url 'cursos' %}" class="btn btn-primary">Ver Cursos</a>
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <img src="{% static 'AppCoder/assets/img/cursos/inicio2.jpg' %}" class="card-img-top img-fluid" alt="Desafía tus Habilidades">
+                <div class="card-body">
+                    <h5 class="card-title">Desafía tus Habilidades</h5>
+                    <p class="card-text">Completa entregables y evalúa tus conocimientos.</p>
+                    <a href="{% url 'entregables' %}" class="btn btn-primary">Ver Entregables</a>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Desafía tus Habilidades</h2>
-                <p>Completa entregables y evalúa tus conocimientos.</p>
-                <a href="{% url 'entregables' %}" class="btn btn-primary">Ver Entregables</a>
-            </div>
-            <div class="col-lg-4">
-                <h2>Conéctate con Profesores</h2>
-                <p>Obtén ayuda y mentoría de expertos en programación.</p>
-                <a href="{% url 'profesores' %}" class="btn btn-primary">Ver Profesores</a>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-light">
+                <img src="{% static 'AppCoder/assets/img/cursos/inicio3.jpg' %}" class="card-img-top img-fluid" alt="Conéctate con Profesores">
+                <div class="card-body">
+                    <h5 class="card-title">Conéctate con Profesores</h5>
+                    <p class="card-text">Obtén ayuda y mentoría de expertos en programación.</p>
+                    <a href="{% url 'profesores' %}" class="btn btn-primary">Ver Profesores</a>
+                </div>
             </div>
         </div>
     </div>
-    {% endblock contenidoCambiante %}
+</div>
+<!-- Fin Contenido Principal -->
+
+{% endblock contenidoCambiante %}

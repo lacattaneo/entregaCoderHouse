@@ -1,12 +1,25 @@
 from django import forms
+from .models import Estudiante
 
-class FormularioCurso(forms.Form):
-    #especificar campos
-    nombre = forms.CharField(
-        label="Curso",
-        max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'Nombre del Curso'}))
+class FormularioCursoPython(forms.Form):
+        nombre = forms.CharField(
+            label="Nombre",
+            max_length=100,
+            widget=forms.TextInput(attrs={'placeholder': 'Nombre'}))
+        
+        apellido = forms.CharField(
+            label="Apellido",
+            max_length=100,
+            widget=forms.TextInput(attrs={'placeholder': 'Apellido'}))
+        
+        email = forms.EmailField(
+            label="Email",
+            max_length=100,
+            widget=forms.TextInput(attrs={'placeholder': 'Correo Electronico'}))
+        
     
+    #esto es, pensandolo como una curso y no un estudiante
+"""
     camada = forms.IntegerField(
         label="Camada",
-        widget=forms.TextInput(attrs={'placeholder': 'Numero de Camada'}))
+        widget=forms.TextInput(attrs={'placeholder': 'Numero de Camada'}))"""

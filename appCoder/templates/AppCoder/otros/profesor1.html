@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Carlos García - Curriculum</title>
+    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
+</head>
+<body>
+    {% extends "AppCoder/base.html" %}
+    {% block contenidoCambiante %}
+    <header class="masthead text-center text-white bg-primary">
+        <div class="masthead-content">
+            <div class="container px-4">
+                <h1 class="masthead-heading mb-0">Prof. Carlos García</h1>
+                <p class="lead mb-4">Especialista en Python y Ciencia de Datos</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <img src="{% static 'AppCoder/assets/img/profesores/profePython.jpg' %}" class="card-img-top" alt="Prof. Carlos García">
+                    <div class="card-body">
+                        <h2 class="card-title">Perfil Profesional</h2>
+                        <p class="card-text">
+                            Prof. Carlos García es un experimentado especialista en Python con más de 10 años de experiencia en la industria. Su enfoque principal es la Ciencia de Datos, donde ha trabajado en proyectos que involucran análisis de grandes volúmenes de datos, aprendizaje automático y visualización de datos.
+                        </p>
+                        <h3 class="card-title">Educación</h3>
+                        <ul>
+                            <li>Ph.D. en Ciencia de Datos - Universidad Tecnologica</li>
+                            <li>Máster en Inteligencia Artificial - Universidad Argentina de la Empresa</li>
+                            <li>Licenciatura en Ciencias de la Computación - UNNE</li>
+                        </ul>
+                        <h3 class="card-title">Experiencia</h3>
+                        <ul>
+                            <li>Data Scientist en Tech Solutions (2015-Presente)</li>
+                            <li>Consultor de Ciencia de Datos en Innovate Analytics (2012-2015)</li>
+                            <li>Desarrollador de Software en DataCorp (2008-2012)</li>
+                        </ul>
+                        <h3 class="card-title">Publicaciones</h3>
+                        <ul>
+                            <li>"Machine Learning for Big Data" - Journal of Data Science</li>
+                            <li>"Advanced Data Visualization Techniques" - Data Analytics Review</li>
+                        </ul>
+                        <a href="{% url 'profesores' %}" class="btn btn-primary">Volver a la Lista de Profesores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock contenidoCambiante %}
+</body>
+</html>
