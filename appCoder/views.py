@@ -41,3 +41,19 @@ def formularioCursoPython(request):
         form = FormularioCursoPython()
     
     return render(request, 'AppCoder/formularioCursoPython.html', {'form': form})
+
+
+def busquedaEstudiante(request):
+    return render(request, "AppCoder/busquedaEstudiante.html")
+
+
+def buscar(request):
+    nombre = request.GET.get("nombre", "")
+    apellido = request.GET.get("apellido", "")
+    
+    if nombre or apellido:
+        respuesta = f"Estoy buscando al estudiante: {nombre} {apellido}"
+    else:
+        respuesta = "No se ha proporcionado un nombre o apellido para buscar."
+
+    return HttpResponse(respuesta)

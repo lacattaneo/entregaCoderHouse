@@ -1,9 +1,6 @@
 -faltan agregar los html de la informacion de los profesores y detalles de los cursos
-
     -unir todo y darle color
 
 ver como mejorar lo de los formularios de cursos, si dejamos 1 para los 3 o un form para cada uno de los cursos.
-
-
 
 ver que onda con la pestaña de entregables
