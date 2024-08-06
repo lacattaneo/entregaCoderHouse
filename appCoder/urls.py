@@ -12,4 +12,14 @@ urlpatterns = [
     path('formularioCursoPython/',views.formularioCursoPython, name = "formularioCursoPython"),
     path('busquedaEstudiante/', views.busquedaEstudiante, name="BusquedaEstudiante"),
     path('buscar/', views.buscar, name='buscar'),
+
+    #otros
+    path('detallesJava/', views.detallesJava, name='detallesJava'),
+    path('detallesJs/', views.detallesJs, name='detallesJs'),
+    path('detallesPython/', views.detallesPython, name='detallesPython'),
+
+    #profesores
+    path('profesor1/',views.profesor1, name='profesor1'),
+    path('profesor2/',views.profesor2, name='profesor2'),
+    path('profesor3/',views.profesor3, name='profesor3'),
 ]

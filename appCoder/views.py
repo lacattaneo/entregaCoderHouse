@@ -64,3 +64,23 @@ def buscar(request):
         respuesta = "No se ha proporcionado un apellido para buscar."
 
     return render(request, "AppCoder/busquedaEstudiante.html", {"respuesta": respuesta})
+
+
+    
+def detallesJava(request):
+    return render(request, 'AppCoder/java.html')
+
+def detallesJs(request):
+    return render(request, 'AppCoder/js.html')
+
+def detallesPython(request):
+    return render(request, 'AppCoder/python.html')
+
+def profesor1(request):
+    return render(request, 'AppCoder/profesor1.html')
+
+def profesor2(request):
+    return render(request, 'AppCoder/profesor2.html')
+
+def profesor3(request):
+    return render(request, 'AppCoder/profesor3.html')

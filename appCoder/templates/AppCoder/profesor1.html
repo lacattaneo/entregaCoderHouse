@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Carlos García - Curriculum</title>
-    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
-</head>
-<body>
-    {% extends "AppCoder/base.html" %}
-    {% block contenidoCambiante %}
+{% extends "AppCoder/base.html" %}
+{% load static %}
+{% block contenidoCambiante %}
     <header class="masthead text-center text-white bg-primary">
         <div class="masthead-content">
             <div class="container px-4">
@@ -23,7 +14,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <img src="{% static 'AppCoder/assets/img/profesores/profePython.jpg' %}" class="card-img-top" alt="Prof. Carlos García">
+                    <div style="text-align: center;">
+                        <img src="{% static 'AppCoder/assets/img/profesores/profePython.jpg' %}" class="card-img-top" alt="Prof. Carlos García" style="width: 250px; height: 200px;">
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Perfil Profesional</h2>
                         <p class="card-text">

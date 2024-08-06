@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Java - Detalles</title>
-    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
-</head>
-<body>
+
     {% extends "AppCoder/base.html" %}
+    {% load static %}
     {% block contenidoCambiante %}
     <header class="masthead text-center text-white bg-primary">
         <div class="masthead-content">
@@ -23,7 +15,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <img src="{% static 'AppCoder/assets/img/cursos/javaCurso.png' %}" class="card-img-top" alt="Java">
+                    <div style="text-align: center;">
+                        <img src="{% static 'AppCoder/assets/img/java.jpg' %}" class="card-img-top" alt="java" style="width: 250px; height: 200px;">
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Descripción del Curso</h2>
                         <p class="card-text">
@@ -40,12 +34,11 @@
                         <h3 class="card-title">Duración</h3>
                         <p>6 semanas (4 horas por semana)</p>
                         <a href="{% url 'cursos' %}" class="btn btn-primary">Volver a la Lista de Cursos</a>
-                        <a href="{% url 'formularioCursoJava' %}" class="btn btn-success mt-2">Inscribirse</a>
+                        <a href="{% url 'formularioCursoPython' %}" class="btn btn-success mt-2">Inscribirse</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     {% endblock contenidoCambiante %}
-</body>
-</html>
+

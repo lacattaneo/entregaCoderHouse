@@ -1,32 +1,112 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Ingreso Cursos</title>
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="{% static 'AppCoder/css/styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .masthead {
+            padding: 1rem 0; /* Ajusta el padding superior e inferior */
+            background: #007bff; /* Fondo del encabezado */
+            color: #fff; /* Color del texto del encabezado */
+            text-align: center;
+        }
+
+        .masthead-heading {
+            font-size: 1.5rem; /* Tamaño del encabezado principal */
+            margin-bottom: 1.5rem;
+        }
+
+        .masthead p {
+            font-size: 1rem; /* Tamaño del texto adicional */
+            margin-bottom: 1rem; /* Espaciado inferior del texto */
+        }
+
+        form {
+            background: #f9f9f9; /* Fondo del formulario */
+            border-radius: 8px; /* Bordes redondeados */
+            padding: 1.5rem; /* Espaciado interno */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            max-width: 600px; /* Ancho máximo del formulario */
+            margin: 2rem auto; /* Centra el formulario y agrega margen superior e inferior */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%; /* Hace que los campos de entrada ocupen todo el ancho disponible */
+            padding: 0.75rem; /* Espaciado interno de los campos */
+            border: 1px solid #ddd; /* Borde del campo */
+            border-radius: 4px; /* Bordes redondeados para los campos */
+            margin-bottom: 1rem; /* Espaciado inferior de los campos */
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none; /* Elimina el borde del botón */
+            padding: 0.75rem 1.5rem; /* Espaciado interno del botón */
+            border-radius: 4px; /* Bordes redondeados del botón */
+            font-size: 1rem; /* Tamaño del texto del botón */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            display: block; /* Hace que el botón ocupe todo el ancho disponible */
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+        }
+
+        .error {
+            color: red; /* Color del texto de error */
+            margin-bottom: 1rem; /* Espaciado inferior del mensaje de error */
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <!--ACTION == nombre de url destino de la informacion-->
-    <!--METHOD == forma en el que se envia la informacion-->
 
-    {% if form.errors %}
+    <div class="container">
+        <h2>ingrese sus datos</h2>
 
-    <p style="color: red;">Estan mal los datos ingresados. </p>
+        {% if form.errors %}
+            <p class="error">Están mal los datos ingresados.</p>
+        {% endif %}
 
-    {% endif %}
-
-    <h2>Registrar Estudiante</h2>
-    <form action="{% url 'formularioCursoPython' %}" method="POST"> 
-        {% csrf_token %}
-        <table>
-            {{form.as_table}}
-
-            
-        </table>
-
-        <input type="submit" value="Registrar">
-    </form>
-
+        <form action="{% url 'formularioCursoPython' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <input type="submit" value="Registrar">
+            <br>
+            <button type="button" class="btn-volver" onclick="history.back()">Atrás</button>
+        </form>
+    </div>
 </body>
+
 </html>
