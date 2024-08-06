@@ -12,4 +12,4 @@
 
 asi mismo, cada formulario o detalle de profesores y cursos, tienen un boton que les lleva a la pagina anterior. ya que en los formularios decidi no colocar el nav por comodidad visual.
 
-
+en el footer, cada uno de los iconos de redes sociales, llevan a mis redes sociales privadas.
