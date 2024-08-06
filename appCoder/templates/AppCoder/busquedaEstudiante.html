@@ -12,24 +12,26 @@
 <body>
     <div class="container">
         <h1>Búsqueda de Estudiantes</h1>
-        <form method="GET" action="{% url 'buscar' %}">
-            <div class="form-group">
-                <label for="apellido">Ingrese el apellido del estudiante:</label>
-                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido del estudiante" required>
-            </div>
-            <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+
+        <form action="{% url 'buscar' %}" method="get">
+            <label for="apellido">Apellido del estudiante:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <button type="submit">Buscar</button>
         </form>
 
-        {% if estudiantes %}
-        <h2>Resultados de la búsqueda</h2>
-        <ul>
-            {% for estudiante in estudiantes %}
-            <li>{{ estudiante.nombre }} {{ estudiante.apellido }}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No se encontraron estudiantes con ese apellido.</p>
-        {% endif %}
+        {% if respuesta %}
+            {% if respuesta != "No se ha proporcionado un apellido para buscar." and respuesta != "No se encontraron estudiantes con ese apellido." %}
+            <ul>
+                {% for estudiante in respuesta %}
+                <li>Nombre: {{ estudiante.nombre }} {{ estudiante.apellido }} - Curso: {{ estudiante.curso }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>{{ respuesta }}</p>
+            {% endif %}
+            {% else %}
+                <p>No se ha realizado ninguna búsqueda aún.</p>
+            {% endif %}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

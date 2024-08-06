@@ -33,8 +33,9 @@ def formularioCursoPython(request):
             nombre = form.cleaned_data['nombre']
             apellido = form.cleaned_data['apellido']
             email = form.cleaned_data['email']
+            curso = form.cleaned_data['curso']
 
-        Estudiante.objects.create(nombre=nombre, apellido=apellido, email=email)
+        Estudiante.objects.create(nombre=nombre, apellido=apellido, email=email, curso=curso)
 
         return redirect("index") # o usa redirect('nombre_de_la_url') para redirigir
     else:
@@ -43,17 +44,23 @@ def formularioCursoPython(request):
     return render(request, 'AppCoder/formularioCursoPython.html', {'form': form})
 
 
+
+
 def busquedaEstudiante(request):
     return render(request, "AppCoder/busquedaEstudiante.html")
 
 
 def buscar(request):
-    nombre = request.GET.get("nombre", "")
     apellido = request.GET.get("apellido", "")
-    
-    if nombre or apellido:
-        respuesta = f"Estoy buscando al estudiante: {nombre} {apellido}"
-    else:
-        respuesta = "No se ha proporcionado un nombre o apellido para buscar."
 
-    return HttpResponse(respuesta)
+    if apellido:
+        # Busca estudiantes que coincidan con el apellido
+        estudiantes = Estudiante.objects.filter(apellido__icontains=apellido)
+        if estudiantes.exists():
+            respuesta = estudiantes
+        else:
+            respuesta = "No se encontraron estudiantes con ese apellido."
+    else:
+        respuesta = "No se ha proporcionado un apellido para buscar."
+
+    return render(request, "AppCoder/busquedaEstudiante.html", {"respuesta": respuesta})

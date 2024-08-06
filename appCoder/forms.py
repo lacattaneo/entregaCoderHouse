@@ -17,6 +17,11 @@ class FormularioCursoPython(forms.Form):
             max_length=100,
             widget=forms.TextInput(attrs={'placeholder': 'Correo Electronico'}))
         
+        curso = forms.CharField(
+            label="Curso",
+            max_length=100,
+            widget=forms.TextInput(attrs={'placeholder': 'Curso'}))
+        
     
     #esto es, pensandolo como una curso y no un estudiante
 """

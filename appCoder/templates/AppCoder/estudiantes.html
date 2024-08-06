@@ -1,60 +1,58 @@
 {% extends "AppCoder/base.html" %}
-    {% load static %}
+{% load static %}
 
-
-    {% block contenidoCambiante %}
-    <header class="masthead text-center text-white">
-        <div class="masthead-content">
-            <div class="container px-0">
-                
-                <h1 class="masthead-heading mb-0">ESTUDIANTES</h1>
-                <p>Algunos de los Estudiantes que confian cada dia en nosotros</p>
-
+{% block contenidoCambiante %}
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-0">
+            <h1 class="masthead-heading mb-0">ESTUDIANTES</h1>
+            <p>Algunos de los Estudiantes que confían cada día en nosotros</p>
             
-                
+            <!-- Agregar botón de búsqueda de estudiantes -->
+            
+        </div>
+    </div>
+    
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+<div class="container">
+    <a class="btn btn-primary btn-lg mt-3" href="{% url 'buscar' %}">Buscar Estudiante</a>
+    <br>
+    <div class="row">
+        <!-- Primer estudiante -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'AppCoder/assets/img/estudiantes/chica1.jpg' %}" class="card-img-top" alt="María Victoria Molina">
+                <div class="card-body">
+                    <h5 class="card-title">María Victoria Molina</h5>
+                    <p class="card-text">Curso: Python para Principiantes</p>
+                </div>
             </div>
         </div>
-        
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
-    </header>
-    <div class="container">
-        <br>
-        
-
-        <div class="row">
-            <!-- Primer estudiante -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'AppCoder/assets/img/estudiantes/chica1.jpg' %}" class="card-img-top" alt="María Victoria Molina">
-                    <div class="card-body">
-                        <h5 class="card-title">María Victoria Molina</h5>
-                        <p class="card-text">Curso: Python para Principiantes</p>
-                    </div>
+        <!-- Segundo estudiante -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'AppCoder/assets/img/estudiantes/chico1.jpg' %}" class="card-img-top" alt="Juan Suarez">
+                <div class="card-body">
+                    <h5 class="card-title">Juan Suarez</h5>
+                    <p class="card-text">Curso: Java</p>
                 </div>
             </div>
-            <!-- Segundo estudiante -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'AppCoder/assets/img/estudiantes/chico1.jpg' %}" class="card-img-top" alt="Juan Suarez">
-                    <div class="card-body">
-                        <h5 class="card-title">Juan Suarez</h5>
-                        <p class="card-text">Curso: Java</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Tercer estudiante -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'AppCoder/assets/img/estudiantes/chica2.jpg' %}" class="card-img-top" alt="Ana Rodríguez">
-                    <div class="card-body">
-                        <h5 class="card-title">Ana Rodríguez</h5>
-                        <p class="card-text">Curso: Desarrollo Web</p>
-                    </div>
+        </div>
+        <!-- Tercer estudiante -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'AppCoder/assets/img/estudiantes/chica2.jpg' %}" class="card-img-top" alt="Ana Rodríguez">
+                <div class="card-body">
+                    <h5 class="card-title">Ana Rodríguez</h5>
+                    <p class="card-text">Curso: Desarrollo Web</p>
                 </div>
             </div>
         </div>
     </div>
-    {% endblock contenidoCambiante %}
+</div>
+{% endblock contenidoCambiante %}
